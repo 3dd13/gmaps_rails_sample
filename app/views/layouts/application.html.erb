@@ -18,6 +18,10 @@
 
   <%= yield %>
 
+  <footer>
+    <a href="http://3dd13.me">Eddie Lau</a>
+  </footer>
+  
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= content_for(:inline_javascript) %>

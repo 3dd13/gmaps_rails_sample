@@ -1,0 +1,28 @@
+body {
+  font-family: Verdana;
+}
+
+a {
+  color: #369;  
+  text-decoration: none;  
+}
+
+a:visited {
+  color: #369;  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  border-bottom: solid 1px #369;
+  padding: 10px 0px;
+}
+
+footer {
+  border-top: solid 1px #369;
+  padding: 10px 0px;
+  
+  text-align: right;
+}

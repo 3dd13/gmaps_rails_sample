@@ -1,0 +1,39 @@
+<h1>Welcome</h1>
+
+<div id="map" style="width: 800px; height: 600px"></div>
+
+<% content_for(:inline_javascript) do %>
+<script>
+  $(function() {
+    var defaultLat = <%= @default_latitude %>;
+    var defaultLng = <%= @default_longitude %>;
+    var map = new GMaps({
+      div: '#map',
+      zoom: 15,
+      lat: defaultLat,
+      lng: defaultLng,
+      click: function(e) {
+        alert('click map');
+      },
+      dragend: function(e) {
+        alert('dragend map');
+      }
+    });
+    
+    var locations = <%= raw @venues.to_json %>;
+    $.each(locations, function(index, data) {
+      map.addMarker({
+        lat: data.latitude,
+        lng: data.longitude,
+        title:  data.name,
+        click: function(e) {
+          alert('You clicked in this marker:' +  data.name + ", " + data.description);
+        },
+        infoWindow: {
+          content: '<p>HTML Content in info window: ' + data.name + '</p>'
+        }
+      });
+    });
+  })
+</script>
+<% end %>

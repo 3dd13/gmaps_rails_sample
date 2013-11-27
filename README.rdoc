@@ -1,5 +1,7 @@
 == gmaps.js + rails
 
+demo available here: http://gmaps-rails-sample.herokuapp.com/
+
 - CRUD of venues with location
 - CRUD of events with venues
 - showing venues as markers at landing page google map

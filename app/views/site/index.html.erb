@@ -29,9 +29,13 @@
         click: function(e) {
           alert('You clicked in this marker:' +  data.name + ", " + data.description);
         },
+        dragend: function(e) {
+          alert('dragend marker');
+        },
         infoWindow: {
           content: '<p>HTML Content in info window: ' + data.name + '</p>'
-        }
+        },
+        draggable: true
       });
     });
   })
